@@ -6,7 +6,13 @@ namespace MimeTypeHelper
     {
         static void Main(string[] args)
         {
-            MimeTypeHelper.Application.
+            var mimeType = MimeTypeHelper.Application.Json;
+            var extension = MimeTypeHelper.GetExtension(mimeType);
+            var resultMimeType = MimeTypeHelper.GetMimeType(extension);
+
+            Console.WriteLine(mimeType);
+            Console.WriteLine(extension);
+            Console.WriteLine(resultMimeType);
         }
     }
 }
